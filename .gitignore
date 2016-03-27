@@ -1,0 +1,6 @@
+Debug/*.exe
+Debug/*.ilk
+Debug/*.pdb
+OpenGL/Debug/
+OpenGL.sdf
+OpenGL.sln
