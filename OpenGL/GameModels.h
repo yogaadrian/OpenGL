@@ -24,7 +24,7 @@ namespace Models
 	public:
 		GameModels();
 		~GameModels();
-		void CreateTriangleModel(const std::string& gameModelName);
+		void CreateTriangleModel(const std::string& gameModelName, std::vector<VertexFormat> vertices);
 		void DeleteModel(const std::string& gameModelName);
 		unsigned int GetModel(const std::string& gameModelName);
 	private:

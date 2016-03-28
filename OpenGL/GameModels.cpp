@@ -1,4 +1,5 @@
 #include "GameModels.h"
+#include <vector>
 using namespace Models;
  
 GameModels::GameModels()
@@ -21,7 +22,7 @@ GameModels::~GameModels()
   GameModelList.clear();
 }
  
-void GameModels::CreateTriangleModel(const std::string& gameModelName)
+void GameModels::CreateTriangleModel(const std::string& gameModelName, std::vector<VertexFormat> vertices)
 {
    unsigned int vao;
    unsigned int vbo;
@@ -29,10 +30,7 @@ void GameModels::CreateTriangleModel(const std::string& gameModelName)
    glGenVertexArrays(1, &vao);
    glBindVertexArray(vao);
  
-   std::vector<VertexFormat> vertices;//our vertex positions
-   vertices.push_back(VertexFormat(glm::vec3( 0.25, -0.25, 0.0), glm::vec4(1, 0, 0, 1)));
-   vertices.push_back(VertexFormat(glm::vec3(-0.25, -0.25, 0.0), glm::vec4(0, 1, 0, 1)));
-   vertices.push_back(VertexFormat(glm::vec3( 0.25, 0.25, 0.0), glm::vec4(0, 0, 1, 1)));
+   
  
    glGenBuffers(1, &vbo);
    glBindBuffer(GL_ARRAY_BUFFER, vbo);
